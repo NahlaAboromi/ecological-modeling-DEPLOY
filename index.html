@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartKinneret Three Ecosystems</title>
+    <title>SmartKinneret - מערכת בטיחות רחצה</title>
     <style>
         * {
             margin: 0;
@@ -146,27 +146,27 @@
             font-size: 1.5rem;
         }
 
-        /* דגים - מינים שונים */
-        .fish1 { top: 35%; left: 15%; } /* דג סרדין */
-        .fish2 { top: 60%; left: 75%; } /* דג בורי */
-        .fish3 { top: 45%; left: 85%; font-size: 1.3rem; } /* דג מושט */
+        /* סיכוני בטיחות */
+        .fish1 { top: 35%; left: 15%; } /* אזור המדרגה */
+        .fish2 { top: 60%; left: 75%; } /* זרם חזק */
+        .fish3 { top: 45%; left: 85%; font-size: 1.3rem; } /* גלים גבוהים */
         
-        /* פיטופלנקטון ואצות */
-        .algae1 { top: 20%; left: 60%; color: #4caf50; }
-        .algae2 { top: 75%; left: 25%; color: #66bb6a; }
-        .algae3 { top: 30%; left: 30%; color: #81c784; }
+        /* חיישני בטיחות */
+        .algae1 { top: 20%; left: 60%; color: #1976d2; }
+        .algae2 { top: 75%; left: 25%; color: #388e3c; }
+        .algae3 { top: 30%; left: 30%; color: #7b1fa2; }
         
-        /* ציאנובקטריה */
-        .bacteria1 { top: 15%; left: 45%; color: #00bcd4; font-size: 1.2rem; }
-        .bacteria2 { top: 25%; left: 70%; color: #26c6da; font-size: 1.2rem; }
+        /* התרעות */
+        .bacteria1 { top: 15%; left: 45%; color: #d32f2f; font-size: 1.2rem; }
+        .bacteria2 { top: 25%; left: 70%; color: #f57c00; font-size: 1.2rem; }
         
-        /* זואופלנקטון */
-        .plankton1 { top: 50%; left: 40%; color: #ff7043; font-size: 1rem; }
-        .plankton2 { top: 65%; left: 60%; color: #ff8a65; font-size: 1rem; }
+        /* אזורי בטיחות */
+        .plankton1 { top: 50%; left: 40%; color: #4caf50; font-size: 1rem; }
+        .plankton2 { top: 65%; left: 60%; color: #ff9800; font-size: 1rem; }
         
-        /* צמחיית מים */
-        .plants1 { top: 80%; left: 40%; color: #8bc34a; }
-        .plants2 { top: 85%; left: 65%; color: #9ccc65; }
+        /* מדידות סביבתיות */
+        .plants1 { top: 80%; left: 40%; color: #e91e63; }
+        .plants2 { top: 85%; left: 65%; color: #795548; }
 
         .sensor {
             background: rgba(255,255,255,0.9);
@@ -288,6 +288,25 @@
         @keyframes pollution-flow {
             0%, 100% { transform: translateY(0); opacity: 0.7; }
             50% { transform: translateY(15px); opacity: 1; }
+        }
+
+        /* אנימציות חדשות לבטיחות */
+        @keyframes danger-pulse {
+            0%, 100% { 
+                opacity: 0.7; 
+                transform: scale(1);
+                text-shadow: 0 0 5px rgba(183, 28, 28, 0.5);
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.3);
+                text-shadow: 0 0 15px rgba(183, 28, 28, 0.8);
+            }
+        }
+
+        @keyframes danger-blink {
+            0%, 100% { opacity: 1; color: #d32f2f; }
+            50% { opacity: 0.3; color: #ff5722; }
         }
 
         /* תוויות מסודרות בעמודה */
@@ -528,51 +547,52 @@
         <!-- כותרת -->
         <div class="header">
             <h1>🌊 SmartKinneret</h1>
-            <p>מערכת חכמה לניטור וחיזוי מצב אגם הכנרת בזמן אמת</p>
+            <p>מערכת חכמה לניטור וחיזוי בטיחות רחצה באגם הכנרת בזמן אמת</p>
         </div>
 
-        <!-- אקוסיסטם טבעי: הכנרת -->
+        <!-- אקוסיסטם פיזיקלי: הכנרת -->
         <div class="ecosystem natural-ecosystem">
-            <div class="ecosystem-title">🌍 אקוסיסטם טבעי: הכנרת</div>
+            <div class="ecosystem-title">🌍 אקוסיסטם פיזיקלי: תנאי הכנרת בזמן אמת</div>
             <div class="ecosystem-separator">
-                <strong>מים • חומרים מזינים • דגים • פלנקטון • חמצן<br>
-                מזג אוויר • סחף • שימושי אדם • מדיניות</strong>
+                <strong>מפלס מים • גובה גלים • עוצמת רוח • כיוון רוח<br>
+                זרמים • טמפרטורה • עכירות • "המדרגה" • בטיחות רחצה</strong>
             </div>
             
-            <!-- תופעות אקולוגיות באגם הכנרת -->
+            <!-- תופעות פיזיקליות ובטיחות באגם הכנרת -->
             <div class="ecological-info">
-                <h3>🌊 התופעות האקולוגיות באגם הכנרת</h3>
+                <h3>⚠️ פרמטרים קריטיים לבטיחות הרחצה</h3>
                 
                 <div class="ecological-grid">
                     <div class="ecological-item">
-                        <strong>🐟 מגוון ביולוגי:</strong><br>
-                        • דגי סרדין - מין עיקרי<br>
-                        • דגי בורי - דג מסחרי<br>
-                        • דג מושט - מין אנדמי<br>
-                        • זואופלנקטון - בסיס השרשרת
+                        <strong>🌊 גובה גלים:</strong><br>
+                        • גלים עד 30 ס"מ - תנאי אידיאליים<br>
+                        • גלים 30-60 ס"מ - זהירות<br>
+                        • גלים מעל 60 ס"מ - מסוכן לרחצה<br>
+                        • מעקב רציף מ-4 תחנות ניטור
                     </div>
                     
                     <div class="ecological-item">
-                        <strong>🌿 צמחיה ואצות:</strong><br>
-                        • פיטופלנקטון - יצרנים ראשוניים<br>
-                        • אצות נטופות - צמחיית מים<br>
-                        • צמחיית קרקעית - מתת הקרקע
+                        <strong>💨 רוח ועוצמה:</strong><br>
+                        • רוח עד 15 קמ"ש - בטוח<br>
+                        • רוח 15-25 קמ"ש - זהירות<br>
+                        • רוח מעל 25 קמ"ש - מסוכן<br>
+                        • כיוון רוח משפיע על אזורי סיכון
                     </div>
                     
                     <div class="ecological-item">
-                        <strong>⚠️ תופעות בעייתיות:</strong><br>
-                        • 🌼 פריחת אצות עונתית<br>
-                        • 🦠 ציאנובקטריה רעילה<br>
-                        • 🌊 שכבות תרמיות<br>
-                        • 🌡️ התחממות מים
+                        <strong>📏 מפלס וטופוגרפיה:</strong><br>
+                        • 🚨 "המדרגה" - ירידת עומק חדה<br>
+                        • שינויי מפלס מיום ליום<br>
+                        • זרמים תת-מימיים<br>
+                        • איתור אזורי עומק מסוכנים
                     </div>
                     
                     <div class="ecological-item">
-                        <strong>🌍 גורמים חיצוניים:</strong><br>
-                        • 🌾 נוטריינטים מחקלאות<br>
-                        • 🏭 מקורות זיהום נקודתיים<br>
-                        • ☀️ קרינת שמש ואקלים<br>
-                        • ⬆️ שינויי מפלס
+                        <strong>🌡️ תנאים סביבתיים:</strong><br>
+                        • טמפרטורת מים לנוחות<br>
+                        • עכירות ונראות במים<br>
+                        • זרמים חזקים<br>
+                        • תנאי מזג אוויר
                     </div>
                 </div>
             </div>
@@ -581,14 +601,14 @@
             <div class="lake-container">
                 <!-- עמודה שמאל -->
                 <div class="labels-column labels-left">
-                    <div class="column-title">🔬 רכיבים ביולוגיים</div>
-                    <div class="lake-label">🐟 דג סרדין</div>
-                    <div class="lake-label">🐠 דג בורי</div>
-                    <div class="lake-label">🎣 דג מושט</div>
-                    <div class="lake-label">🟢 פיטופלנקטון</div>
-                    <div class="lake-label">🦠 ציאנובקטריה</div>
-                    <div class="lake-label">🔴 זואופלנקטון</div>
-                    <div class="lake-label">🌿 צמחיית מים</div>
+                    <div class="column-title">⚠️ סיכוני בטיחות</div>
+                    <div class="lake-label">🌊 גלים גבוהים</div>
+                    <div class="lake-label">💨 רוח עזה</div>
+                    <div class="lake-label">🚨 המדרגה</div>
+                    <div class="lake-label">🌪️ זרמים חזקים</div>
+                    <div class="lake-label">📏 שינוי מפלס</div>
+                    <div class="lake-label">🌡️ טמפרטורה קיצונית</div>
+                    <div class="lake-label">👁️ עכירות גבוהה</div>
                 </div>
 
                 <!-- האגם במרכז -->
@@ -623,92 +643,93 @@
                         <div class="pollution-source urban">🏭</div>
                         
                         <div class="lake-components">
-                            <!-- דגים - מינים מקומיים -->
-                            <span class="fish fish1" title="דג סרדין">🐟</span>
-                            <span class="fish fish2" title="דג בורי">🐠</span>
-                            <span class="fish fish3" title="דג מושט">🎣</span>
+                            <!-- אזורי סיכון בטיחות -->
+                            <span class="fish fish1" title="אזור המדרגה - סכנת טביעה" style="color: #f44336; font-size: 2rem;">🚨</span>
+                            <span class="fish fish2" title="זרם חזק - סחיפה" style="color: #ff9800; font-size: 1.8rem;">🌪️</span>
+                            <span class="fish fish3" title="גלים גבוהים" style="color: #2196f3; font-size: 1.5rem;">🌊</span>
                             
-                            <!-- פיטופלנקטון ואצות נטופות -->
-                            <span class="algae algae1" title="פיטופלנקטון">🟢</span>
-                            <span class="algae algae2" title="אצות נטופות">🟢</span>
-                            <span class="algae algae3" title="אצות ירוקות">🟢</span>
+                            <!-- חיישני בטיחות פיזיקליים -->
+                            <span class="algae algae1" title="מד גובה גלים" style="color: #1976d2; font-size: 1.3rem;">📏</span>
+                            <span class="algae algae2" title="מד עוצמת רוח" style="color: #388e3c; font-size: 1.3rem;">💨</span>
+                            <span class="algae algae3" title="מד זרמים" style="color: #7b1fa2; font-size: 1.3rem;">🔄</span>
                             
-                            <!-- ציאנובקטריה -->
-                            <span class="bacteria bacteria1" title="ציאנובקטריה">🦠</span>
-                            <span class="bacteria bacteria2" title="חיידקים כחולים-ירוקים">🦠</span>
+                            <!-- התרעות בזמן אמת -->
+                            <span class="bacteria bacteria1" title="התרעת בטיחות" style="color: #d32f2f; font-size: 1.4rem; animation: danger-blink 1.5s infinite;">⚠️</span>
+                            <span class="bacteria bacteria2" title="מפלס נמוך" style="color: #f57c00; font-size: 1.2rem;">📉</span>
                             
-                            <!-- זואופלנקטון -->
-                            <span class="plankton plankton1" title="זואופלנקטון">🔴</span>
-                            <span class="plankton plankton2" title="קופפודים">🔴</span>
+                            <!-- אזורי רחצה מותרים -->
+                            <span class="plankton plankton1" title="אזור בטוח לרחצה" style="color: #4caf50; font-size: 1.2rem;">✅</span>
+                            <span class="plankton plankton2" title="אזור זהירות" style="color: #ff9800; font-size: 1.1rem;">⚠️</span>
                             
-                            <!-- צמחיית מים -->
-                            <span class="plants plants1" title="צמחיית מים">🌿</span>
-                            <span class="plants plants2" title="צמחיית קרקעית">🌿</span>
+                            <!-- מדידות סביבתיות -->
+                            <span class="plants plants1" title="טמפרטורת מים" style="color: #e91e63; font-size: 1.2rem;">🌡️</span>
+                            <span class="plants plants2" title="עכירות המים" style="color: #795548; font-size: 1.1rem;">👁️</span>
                             
-                            <!-- פריחת אצות בתוך האגם -->
-                            <span class="algae" style="top: 35%; left: 50%; color: #f9a825; font-size: 1.8rem;" title="פריחת אצות">🌼</span>
+                            <!-- אזור סכנה מיוחד -->
+                            <span class="algae" style="top: 15%; left: 25%; color: #b71c1c; font-size: 2.2rem; animation: danger-pulse 2s infinite;" title="אזור המדרגה - סכנה קיצונית">🆘</span>
                             
-                            <!-- חיישנים -->
-                            <div class="sensor temp-sensor" title="חיישן טמפרטורה">🌡️</div>
-                            <div class="sensor oxygen-sensor" title="חיישן חמצן מומס">💨</div>
-                            <div class="sensor nutrient-sensor" title="חיישן חומרי הזנה">🧪</div>
+                            <!-- חיישנים מתקדמים -->
+                            <div class="sensor temp-sensor" title="חיישן גובה גלים">🌊</div>
+                            <div class="sensor oxygen-sensor" title="חיישן עוצמת רוח">💨</div>
+                            <div class="sensor nutrient-sensor" title="חיישן מפלס מים">📏</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- עמודה ימין -->
                 <div class="labels-column labels-right">
-                    <div class="column-title">🔧 מקורות וחיישנים</div>
-                    <div class="lake-label">🌡️ חיישן טמפרטורה</div>
-                    <div class="lake-label">💨 חיישן חמצן</div>
-                    <div class="lake-label">🧪 חיישן חומרי הזנה</div>
+                    <div class="column-title">🔧 חיישני בטיחות</div>
+                    <div class="lake-label">🌊 מד גובה גלים</div>
+                    <div class="lake-label">💨 מד עוצמת רוח</div>
+                    <div class="lake-label">📏 מד מפלס מים</div>
                     <div class="lake-label">📡 תחנות ניטור</div>
-                    <div class="lake-label">🌾 זיהום חקלאי</div>
-                    <div class="lake-label">🏭 זיהום עירוני</div>
-                    <div class="lake-label">💧 גשמים</div>
-                    <div class="lake-label">🌼 פריחת אצות</div>
+                    <div class="lake-label">🔄 מד זרמים</div>
+                    <div class="lake-label">🌡️ מדדי סביבה</div>
+                    <div class="lake-label">⚠️ התרעות אוטומטיות</div>
+                    <div class="lake-label">✅ אזורי בטיחות</div>
                 </div>
             </div>
         </div>
 
         <!-- חץ זרימה בין אקוסיסטמים -->
-        <div class="arrow-between-ecosystems">⬇️ נתוני שטח</div>
+        <div class="arrow-between-ecosystems">⬇️ נתוני בטיחות בזמן אמת</div>
 
         <!-- אקוסיסטם טכנולוגי: SmartKinneret -->
         <div class="ecosystem tech-ecosystem">
-            <div class="ecosystem-title"> SmartKinneret 💻</div>
+            <div class="ecosystem-title">💻 SmartKinneret</div>
             <div class="ecosystem-separator">
-                <strong>חיישנים ← תקשורת IoT ← בסיס נתונים<br>
-                מודלים מתמטיים<br>
-                Dashboard • דוחות • התרעות</strong>
+                <strong>חיישנים פיזיקליים ← תקשורת IoT ← בסיס נתונים<br>
+                מודלי חיזוי קצרי טווח • אלגוריתמי בטיחות<br>
+                Dashboard • התרעות • מפות סיכון</strong>
             </div>
 
             <!-- שכבה 1: ניטור פיזי -->
             <div class="system-layer">
-                <div class="layer-title">🛰️ שכבת ניטור פיזי - איסוף נתונים</div>
+                <div class="layer-title">🛰️ שכבת ניטור פיזי - נתוני בטיחות בזמן אמת</div>
                 <div class="layer-content">
                     <div class="component">
                         <span class="component-icon">📡</span>
-                        <h3>תחנות ניטור סביב האגם</h3>
-                        <p>4 תחנות קבועות מפוזרות סביב הכנרת<br>
-                        ניטור מטאורולוגי ופיזיקלי רציף<br>
-                        מדידות מדויקות של פרמטרי הסביבה</p>
+                        <h3>תחנות ניטור מתקדמות</h3>
+                        <p>4 תחנות עם חיישני בטיחות מתקדמים<br>
+                        ניטור גובה גלים, עוצמת רוח וכיוון<br>
+                        מדידות מפלס ושינויי עומק</p>
                     </div>
                     
                     <div class="component">
                         <span class="component-icon">🟡</span>
-                        <h3>מצופי KLAMP</h3>
-                        <p>מצופים אוטונומיים בתוך האגם<br>
-                        טכנולוגיה מתקדמת לניטור עמוק<br>
-                        מדידות רציפות של איכות המים</p>
+                        <h3>מצופי KLAMP מתקדמים</h3>
+                        <p>ניטור זרמים תת-מימיים<br>
+                        זיהוי שינויים טופוגרפיים<br>
+                        מדידות טמפרטורה ועכירות</p>
                     </div>
                     
                     <div class="component">
                         <span class="component-icon">🔬</span>
-                        <h3>חיישנים אקולוגיים</h3>
-                        <p><strong>פיזיקליים:</strong> טמפרטורה, עכירות, מפלס<br>
-                        <strong>כימיים:</strong> חמצן מומס, pH, חנקן, זרחן<br>
-                        <strong>ביולוגיים:</strong> כלורופיל, ציאנובקטריה</p>
+                        <h3>חיישני בטיחות מתמחים</h3>
+                        <p><strong>גלים:</strong> גובה, תדירות, כיוון<br>
+                        <strong>רוח:</strong> עוצמה, כיוון, פרופיל רוח<br>
+                        <strong>מפלס:</strong> שינויים יומיים ושעתיים<br>
+                        <strong>זרמים:</strong> מהירות וכיוון במעמקים</p>
                     </div>
                 </div>
             </div>
@@ -718,30 +739,32 @@
 
             <!-- שכבה 2: עיבוד נתונים -->
             <div class="system-layer">
-                <div class="layer-title">☁️ שכבת עיבוד וניתוח נתונים</div>
+                <div class="layer-title">☁️ שכבת ניתוח וחיזוי קצר טווח</div>
                 <div class="layer-content">
                     <div class="component">
                         <span class="component-icon">🌐</span>
-                        <h3>שרת ענן מרכזי</h3>
-                        <p>איסוף וסנכרון נתונים בזמן אמת<br>
-                        אחסון היסטורי של כל המדידות<br>
-                        עיבוד ראשוני ובדיקת איכות</p>
+                        <h3>מרכז עיבוד בזמן אמת</h3>
+                        <p>עיבוד נתוני בטיחות כל 15 דקות<br>
+                        זיהוי מהיר של שינויי תנאים<br>
+                        אינטגרציה עם תחזיות מזג אוויר</p>
                     </div>
                     
                     <div class="component">
                         <span class="component-icon">📊</span>
-                        <h3>מודלים אקולוגיים</h3>
-                        <p><strong>לוטקה-וולטרא:</strong> יחסי טורף-נטרף<br>
-                        <strong>מודל יוטרופיקציה:</strong> פריחת אצות<br>
-                        <strong>שכבות תרמיות:</strong> התפלגות טמפרטורות</p>
+                        <h3>מודלי חיזוי בטיחות</h3>
+                        <p><strong>חיזוי גלים:</strong> 6-24 שעות קדימה<br>
+                        <strong>תחזית רוח:</strong> מבוסס נתוני מזג אוויר<br>
+                        <strong>דגם המדרגה:</strong> זיהוי אזורי סיכון דינמיים<br>
+                        <strong>מפות זרמים:</strong> חיזוי כיוונים מסוכנים</p>
                     </div>
                     
                     <div class="component">
                         <span class="component-icon">🔮</span>
-                        <h3>חיזוי תופעות אקולוגיות</h3>
-                        <p><strong>פריחת אצות:</strong> התרעה מוקדמת<br>
-                        <strong>ציאנובקטריה:</strong> זיהוי רמות רעילות<br>
-                        <strong>שכבות תרמיות:</strong> חיזוי התפתחות</p>
+                        <h3>אלגוריתמי התרעה חכמים</h3>
+                        <p><strong>דירוג סיכון:</strong> אדום-כתום-ירוק<br>
+                        <strong>התרעות מותאמות:</strong> לפי קבוצות יעד<br>
+                        <strong>חיזוי תנאים:</strong> למקבלי החלטות<br>
+                        <strong>מפות בטיחות:</strong> עדכון כל 30 דקות</p>
                     </div>
                 </div>
             </div>
@@ -751,60 +774,62 @@
 
             <!-- שכבה 3: אפליקציה -->
             <div class="system-layer">
-                <div class="layer-title">📱 SmartKinneret - אפליקציית משתמש קצה</div>
+                <div class="layer-title">📱 SmartKinneret - ממשק בטיחות הרחצה</div>
                 <div class="layer-content">
                     <div class="component">
                         <span class="component-icon">📊</span>
-                        <h3>דשבורד אינטראקטיבי</h3>
-                        <p>תצוגה גרפית של כל הנתונים<br>
-                        גרפים דינמיים ומפות אינטראקטיביות<br>
-                        ממשק ידידותי ונגיש</p>
+                        <h3>דשבורד בטיחות</h3>
+                        <p>מפות אינטראקטיביות של אזורי סיכון<br>
+                        תצוגה חזותית של גובה גלים וכיוון רוח<br>
+                        סטטוס בטיחות לכל חוף בזמן אמת</p>
                     </div>
                     
                     <div class="component">
                         <span class="component-icon">🚨</span>
-                        <h3>מערכת התרעות</h3>
-                        <p>התרעות בזמן אמת על שינויים<br>
-                        הודעות מותאמות לכל סוג משתמש<br>
-                        דירוג חשיבות והמלצות פעולה</p>
+                        <h3>מערכת התרעות מתקדמת</h3>
+                        <p><strong>למנהלי חופים:</strong> התרעות מיידיות<br>
+                        <strong>לכוחות הצלה:</strong> תחזיות סיכון<br>
+                        <strong>לציבור:</strong> הודעות פשוטות וברורות<br>
+                        <strong>לתיירים:</strong> המלצות חופי בטיחות</p>
                     </div>
                     
                     <div class="component">
                         <span class="component-icon">📈</span>
-                        <h3>דוחות ותחזיות</h3>
-                        <p>דוחות מפורטים להורדה<br>
-                        תחזיות מבוססות מודלים<br>
-                        השוואות היסטוריות ומגמות</p>
+                        <h3>חיזוי ותחזיות בטיחות</h3>
+                        <p>תחזית תנאי רחצה ל-24 שעות<br>
+                        מפות סיכון דינמיות<br>
+                        המלצות זמני רחצה מיטביים<br>
+                        דיווחי מקרי חירום</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- חץ זרימה בין אקוסיסטמים -->
-        <div class="arrow-between-ecosystems">⬇️ תובנות</div>
+        <div class="arrow-between-ecosystems">⬇️ התרעות ותחזיות בטיחות</div>
 
         <!-- אקוסיסטם משתמשים -->
         <div class="ecosystem users-ecosystem">
-            <div class="ecosystem-title">📊 משתמשים: מנהלי משאבי מים | חוקרים | ציבור</div>
+            <div class="ecosystem-title">👥 משתמשים: מנהלי חופים | כוחות הצלה | ציבור רוחצים</div>
             
             <!-- בעלי עניין -->
             <div class="stakeholders">
                 <div class="stakeholder">
-                    <div class="stakeholder-icon">💧</div>
-                    <h3>מנהלי משאבי מים</h3>
-                    <p>קבלת החלטות אסטרטגיות<br>על בסיס נתונים מדעיים</p>
+                    <div class="stakeholder-icon">🏖️</div>
+                    <h3>מנהלי חופים</h3>
+                    <p>קבלת החלטות על פתיחה/סגירת חופים<br>בהתבסס על נתוני בטיחות בזמן אמת</p>
                 </div>
                 
                 <div class="stakeholder">
-                    <div class="stakeholder-icon">🔬</div>
-                    <h3>חוקרים אקדמיים</h3>
-                    <p>מחקר אקולוגי מתקדם<br>ופיתוח מודלים חדשים</p>
+                    <div class="stakeholder-icon">🛟</div>
+                    <h3>כוחות הצלה</h3>
+                    <p>התרעות מוקדמות על תנאים מסוכנים<br>חיזוי אזורי סיכון גבוה</p>
                 </div>
                 
                 <div class="stakeholder">
-                    <div class="stakeholder-icon">👥</div>
-                    <h3>ציבור</h3>
-                    <p>מידע נגיש ושקוף<br>על מצב משאב המים הלאומי</p>
+                    <div class="stakeholder-icon">🏊‍♂️</div>
+                    <h3>ציבור רוחצים</h3>
+                    <p>מידע פשוט ונגיש על בטיחות<br>המלצות לחופים בטוחים</p>
                 </div>
             </div>
         </div>
